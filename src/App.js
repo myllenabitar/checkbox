@@ -1,6 +1,8 @@
 import React from 'react';
+import './App.css';
 
-const linguagensArray = ['JavaScript', 'Python', 'Ruby', 'Java', 'Golang', 'PHP', 'C#'];
+const linguagensArray = ['JavaScript', 'Python', 'Ruby', 'Java', 'Golang', 'PHP', 'C#', 'Swift', 'C++', 'C', 'Kotlin', 'TypeScript'];
+
 
 const Checkbox = () => {
    const [linguagens, setLinguagens]= React.useState([]);
@@ -16,16 +18,16 @@ const Checkbox = () => {
     );
     }   
   }
-    function handleChecked (linguagem) {
+  function handleChecked (linguagem) {
     return linguagens.includes(linguagem);
-  }  
+  } 
 
   return (
-  <form>
-    <h1>Quais dessas linguagens de programação você sabe programar?</h1>
+  <form className="checkbox-style">
+    <h2>Quais dessas linguagens de programação você sabe programar?</h2>
     {linguagensArray.map((linguagem) => 
     <label key={linguagem} style={{textTransform: 'capitalize'}}>
-      <ul style={{ listStyleType: 'none', padding: 0 }}>
+      <ul style={{listStyleType: 'none', padding: 0 }}>
         <li>
           <input 
             type="checkbox" 
@@ -35,18 +37,16 @@ const Checkbox = () => {
           </input>
             {linguagem}
         </li>
-       </ul>
+      </ul>
     </label>)}
-    <h1>Sabes essas linguagens:</h1>
-    <ul style={{textTransform: 'capitalize'}}>
-
+    <h3>Sabes todas essas linguagens: ({linguagens.length})</h3>
+    <ul style={{textTransform: 'capitalize'}} >
       {linguagens.length > 0 ? (
       linguagens.map((linguagem) => <li key={linguagem}>{linguagem}</li>)
           ) : (
-      <li>Não sabe nenhuma linguagem</li>
-
+      <p>Não sabes nenhuma linguagem</p>
           )}
-          </ul>
+    </ul>
   </form>
   
 )}
