@@ -21,11 +21,6 @@ const Checkbox = () => {
   function handleChecked (linguagem) {
     return linguagens.includes(linguagem);
   } 
-  const [search, setSearch] = React.useState('');
-
-  const filteredLinguagens = linguagensArray.filter((linguagem) =>
-  linguagem.toLowerCase().includes(search.toLowerCase())
-);
   return (
   
     <div>
