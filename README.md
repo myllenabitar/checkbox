@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Checkbox Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um componente interativo para selecionar linguagens de programação e exibir um contador com as opções escolhidas. Ideal para demonstração de habilidades com React e JavaScript.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📂 Índice
 
-### `npm start`
+- [Descrição do Projeto](#-descrição-do-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Como Executar o Projeto](#-como-executar-o-projeto)
+- [Demonstração](#-demonstração)
+- [Status do Projeto](#-status-do-projeto)
+- [Autor](#-autor)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📜 Descrição do Projeto
 
-### `npm test`
+Este projeto consiste em um componente de checkbox interativo onde o usuário pode selecionar as linguagens de programação que domina. Além disso, ele exibe:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Um contador com o número de linguagens selecionadas.
+- Uma lista dinâmica das linguagens escolhidas.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Marcar e desmarcar linguagens de programação.
+- Exibição em tempo real do número de linguagens selecionadas.
+- Lista dinâmica das opções escolhidas.
+- Design responsivo e amigável.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 💻 Tecnologias Utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React + Vite**
+- **JavaScript**
+- **HTML**
+- **CSS**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Como Executar o Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone este repositório:
 
-## Learn More
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navegue até o diretório do projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   cd checkbox-component
+   ```
 
-### Code Splitting
+3. Instale as dependências:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+4. Execute o projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm run dev
+   ```
 
-### Making a Progressive Web App
+5. Abra no navegador:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   Acesse [http://localhost:5173](http://localhost:5173) para visualizar o projeto.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🎥 Demonstração
 
-### Deployment
+Adicione aqui um GIF ou captura de tela mostrando o projeto em funcionamento.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📈 Status do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:star: **Projeto Concluído!** :star:
+
+---
+
+## 🖋️ Autor
+
+<div align="center">
+  <h3>Myllena Bitar</h3>
+  <img src="https://avatars.githubusercontent.com/u/111917539?v=4" alt="Myllena Bitar" width="120" style="border-radius: 50%;">
+  <p>Desenvolvedora Front-end em transição de carreira, apaixonada por criar interfaces funcionais e estéticas!</p>
+  <a href="https://github.com/myllenabitar" target="_blank">🔗 GitHub</a>
+</div>
