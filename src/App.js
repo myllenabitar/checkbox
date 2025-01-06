@@ -55,12 +55,12 @@ const Checkbox = () => {
 <button className="styled-button" onClick={() => setLinguagens([])}>
   Limpar Seleção
 </button>
-      <h3>Sabes todas essas linguagens: ({linguagens.length})</h3>
+      <h3>Sabe todas essas linguagens: ({linguagens.length})</h3>
       <ul style={{ textTransform: 'capitalize' }}>
         {linguagens.length > 0 ? (
           linguagens.map((linguagem) => <li key={linguagem}>{linguagem}</li>)
         ) : (
-          <p>Não sabes nenhuma linguagem</p>
+          <p>Não sabe nenhuma linguagem</p>
         )}
       </ul>
     </div>
