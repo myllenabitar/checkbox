@@ -21,35 +21,51 @@ const Checkbox = () => {
   function handleChecked (linguagem) {
     return linguagens.includes(linguagem);
   } 
+  const [search, setSearch] = React.useState('');
 
+  const filteredLinguagens = linguagensArray.filter((linguagem) =>
+  linguagem.toLowerCase().includes(search.toLowerCase())
+);
   return (
-  <form className="checkbox-style">
-    <h2>Quais dessas linguagens de programação você sabe programar?</h2>
-    {linguagensArray.map((linguagem) => 
-    <label key={linguagem} style={{textTransform: 'capitalize'}}>
-      <ul style={{listStyleType: 'none', padding: 0 }}>
-        <li>
-          <input 
-            type="checkbox" 
-            value={linguagem} 
-            checked={handleChecked(linguagem)} 
-            onChange={handleChange}>
-          </input>
-            {linguagem}
-        </li>
-      </ul>
-    </label>)}
-    <h3>Sabes todas essas linguagens: ({linguagens.length})</h3>
-    <ul style={{textTransform: 'capitalize'}} >
-      {linguagens.length > 0 ? (
-      linguagens.map((linguagem) => <li key={linguagem}>{linguagem}</li>)
-          ) : (
-      <p>Não sabes nenhuma linguagem</p>
-          )}
-    </ul>
-  </form>
   
-)}
+    <div>
+      {linguagens.length === 0 && (
+      <div className="welcome-screen">
+        <h1>Bem-vindo!</h1>
+        <p>Selecione as linguagens que você sabe programar!</p>
+      </div>
+    )}
+      {linguagensArray.map((linguagem) => (
+  <div key={linguagem} className="card">
+    <input
+      type="checkbox"
+      value={linguagem}
+      checked={handleChecked(linguagem)}
+      onChange={handleChange}
+      id={linguagem}
+    />
+    <label htmlFor={linguagem}>
+      <div className="card-content">
+        <div className="icon">{linguagem[0]}</div>
+        <span>{linguagem}</span>
+      </div>
+    </label>
+  </div>
+))}
+<button className="styled-button" onClick={() => setLinguagens([])}>
+  Limpar Seleção
+</button>
+      <h3>Sabes todas essas linguagens: ({linguagens.length})</h3>
+      <ul style={{ textTransform: 'capitalize' }}>
+        {linguagens.length > 0 ? (
+          linguagens.map((linguagem) => <li key={linguagem}>{linguagem}</li>)
+        ) : (
+          <p>Não sabes nenhuma linguagem</p>
+        )}
+      </ul>
+    </div>
+  )
+}
 
 export default Checkbox;
 
