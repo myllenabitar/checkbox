@@ -10,7 +10,6 @@ Um componente interativo para selecionar linguagens de programação e exibir um
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Como Executar o Projeto](#-como-executar-o-projeto)
-- [Demonstração](#-demonstração)
 - [Status do Projeto](#-status-do-projeto)
 - [Autor](#-autor)
 
@@ -75,15 +74,10 @@ Este projeto consiste em um componente de checkbox interativo onde o usuário po
 
 ---
 
-## 🎥 Demonstração
-
-Adicione aqui um GIF ou captura de tela mostrando o projeto em funcionamento.
-
----
 
 ## 📈 Status do Projeto
 
-:star: **Projeto Concluído!** :star:
+🚧: **Projeto em Construção!** 🚧:
 
 ---
 
