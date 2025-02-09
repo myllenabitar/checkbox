@@ -3,64 +3,48 @@ import './App.css';
 
 const linguagensArray = ['JavaScript', 'Python', 'Ruby', 'Java', 'Golang', 'PHP', 'C#', 'Swift', 'C++', 'C', 'Kotlin', 'TypeScript'];
 
-
 const Checkbox = () => {
-   const [linguagens, setLinguagens]= React.useState([]);
+  const [linguagens, setLinguagens] = React.useState([]);
 
-    function handleChange ({target}) {
-      if (target.checked) { 
-        setLinguagens([...linguagens, target.value]);
-      }  else {
-        setLinguagens(
-          linguagens.filter((linguagem) => {
-        return linguagem !== target.value
-      }),
+  const handleChange = ({ target }) => {
+    setLinguagens((prev) =>
+      target.checked ? [...prev, target.value] : prev.filter((linguagem) => linguagem !== target.value)
     );
-    }   
-  }
-  function handleChecked (linguagem) {
-    return linguagens.includes(linguagem);
-  } 
+  };
+
+  const handleClear = () => setLinguagens([]);
+
   return (
-  
-    <div>
-      {linguagens.length === 0 && (
-      <div className="welcome-screen">
-        <h1>Bem-vindo!</h1>
-        <p>Selecione as linguagens que você sabe programar!</p>
+    <div className="container">
+      <h2>Selecione as linguagens que você sabe:</h2>
+      <div className="checkbox-grid">
+        {linguagensArray.map((linguagem) => (
+          <label key={linguagem} className="checkbox-item">
+            <input
+              type="checkbox"
+              value={linguagem}
+              checked={linguagens.includes(linguagem)}
+              onChange={handleChange}
+            />
+            {linguagem}
+          </label>
+        ))}
       </div>
-    )}
-      {linguagensArray.map((linguagem) => (
-  <div key={linguagem} className="card">
-    <input
-      type="checkbox"
-      value={linguagem}
-      checked={handleChecked(linguagem)}
-      onChange={handleChange}
-      id={linguagem}
-    />
-    <label htmlFor={linguagem}>
-      <div className="card-content">
-        <div className="icon">{linguagem[0]}</div>
-        <span>{linguagem}</span>
-      </div>
-    </label>
-  </div>
-))}
-<button className="styled-button" onClick={() => setLinguagens([])}>
-  Limpar Seleção
-</button>
-      <h3>Sabe todas essas linguagens: ({linguagens.length})</h3>
-      <ul style={{ textTransform: 'capitalize' }}>
-        {linguagens.length > 0 ? (
-          linguagens.map((linguagem) => <li key={linguagem}>{linguagem}</li>)
-        ) : (
-          <p>Não sabe nenhuma linguagem</p>
-        )}
-      </ul>
+      <button className="clear-button" onClick={handleClear}>
+        Limpar Seleção
+      </button>
+      <h3>Suas linguagens: ({linguagens.length})</h3>
+      {linguagens.length > 0 ? (
+        <ul>
+          {linguagens.map((linguagem) => (
+            <li key={linguagem}>{linguagem}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Você ainda não selecionou nenhuma linguagem.</p>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Checkbox;
-
